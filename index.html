@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Chocol | Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<section id="header">
+			<div class="inner">
+				<h1>Hi, I'm <strong>Chocol</strong></h1>
+				<p>Computer Science Student<br>
+				University of York (International Year One)</p>
+
+				<ul class="actions special">
+					<li><a href="#about" class="button">About Me</a></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- About -->
+		<section id="about" class="main style1">
+			<div class="container">
+				<header class="major">
+					<h2>About Me</h2>
+				</header>
+
+				<p>
+					I am currently studying Computer Science at the University of York.
+					I am part of the International Year One programme and developing
+					my skills in programming, web development, and databases.
+				</p>
+
+				<p>
+					我目前在约克大学学习计算机科学，正在International Year One阶段。
+					我正在学习Python、Java以及网站开发，并不断提升自己的编程能力。
+				</p>
+			</div>
+		</section>
+
+		<!-- Skills -->
+		<section id="skills" class="main style2">
+			<div class="container">
+				<header class="major">
+					<h2>Skills</h2>
+				</header>
+
+				<p><strong>Programming:</strong> Python, Java</p>
+				<p><strong>Web:</strong> HTML, CSS</p>
+				<p><strong>Tools:</strong> GitHub, VS Code</p>
+
+			</div>
+		</section>
+
+		<!-- Projects -->
+		<section id="projects" class="main style1">
+			<div class="container">
+				<header class="major">
+					<h2>Projects</h2>
+				</header>
+
+				<h3>1. Python Assignment</h3>
+				<p>Times Table Generator & Student Grade Tracker</p>
+
+				<h3>2. Website Portfolio</h3>
+				<p>This website is built using HTML and CSS</p>
+
+				<h3>3. Database Design</h3>
+				<p>ER diagrams and relational database coursework</p>
+
+			</div>
+		</section>
+
+		<!-- Diary -->
+		<section id="diary" class="main style2">
+			<div class="container">
+				<header class="major">
+					<h2>Production Diary</h2>
+				</header>
+
+				<p><strong>Week 1:</strong> This week, I set up my GitHub Pages portfolio website and created the main structure, including the About, Projects, Skills, and Contact sections. I learned how GitHub repositories connect to GitHub Pages and how to publish a website online.
+In addition, I started to understand the basic structure of a website using HTML. I learned how different sections are organised using tags such as which helped me build a clearer and more logical layout. I also explored how CSS affects the visual design of a webpage, even though I am still at an early stage of learning it.</p>
+				<p><strong>Week 2:</strong> I am most proud of successfully publishing my website for the first time. It felt rewarding to see my own work online and accessible through a real URL. This experience helped me realise how development tools and platforms work together in practice.
+The most challenging part was understanding how repository names affect the website URL and how GitHub Pages links to the correct branch. At the beginning, I was confused about why my website was not updating, but after checking my repository settings and file structure, I gradually solved the problem.</p>
+				<p><strong>Week 3:</strong> Next week, I plan to improve the layout and make the design more user-friendly. I would like to add clearer navigation, improve the visual structure, and possibly include a small maths-related feature to demonstrate my programming skills. I also want to continue learning CSS to make my website more visually appealing.
+Overall, this week has been a very meaningful step in my learning journey. I feel more confident in using GitHub and starting web development, and I am motivated to keep improving my skills.</p>
+                <p><strong>Week 4:</strong>I improved my website by adding a contact form instead of displaying my email address. Users can now enter their name, email, and message, which improves interaction and usability. The form includes required fields to prevent errors and provides feedback when submitted. This change improves several usability heuristics, including error prevention, recognition rather than recall, and visibility of system status.</p>
+			    <p><strong>Week 4:</strong>I customised the colour scheme of my website to a soft purple theme. However, I noticed that the text in the header became difficult to read. To improve usability, I adjusted the text colour to white and added a shadow effect to increase contrast. This improves readability and enhances the overall user experience.</p>
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section id="contact" class="main style1">
+		<!-- Contact -->
+<section id="contact" class="main style1">
+	<div class="container">
+		<header class="major">
+			<h2>Contact</h2>
+		</header>
+
+		<p>If you would like to contact me, please fill in the form below:</p>
+
+		<form>
+			<label for="name">Name:</label><br>
+			<input type="text" id="name" name="name" required><br><br>
+
+			<label for="email">Email:</label><br>
+			<input type="email" id="email" name="email" required><br><br>
+
+			<label for="message">Message:</label><br>
+			<textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+			<button type="submit">Send Message</button>
+		</form>
+
+	</div>
+</section>
+<script>
+document.querySelector("form").addEventListener("submit", function(event) {
+	event.preventDefault();
+	alert("Message sent successfully!");
+});
+</script>
+	</body>
+</html>
