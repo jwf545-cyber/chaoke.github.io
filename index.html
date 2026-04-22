@@ -1,10 +1,13 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Chocol | Portfolio</title>
+		<title>Chaoke | Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 
 	<body>
@@ -12,7 +15,7 @@
 		<!-- Header -->
 		<section id="header">
 			<div class="inner">
-				<h1>Hi, I'm <strong>Chocol</strong></h1>
+				<h1>Hi, I'm <strong>Chaoke</strong></h1>
 				<p>Computer Science Student<br>
 				University of York (International Year One)</p>
 
@@ -26,7 +29,7 @@
 		<section id="about" class="main style1">
 			<div class="container">
 				<header class="major">
-					<h2>About Me</h2>
+					<h2>✿ About Me</h2>
 				</header>
 
 				<p>
@@ -46,12 +49,25 @@
 		<section id="skills" class="main style2">
 			<div class="container">
 				<header class="major">
-					<h2>Skills</h2>
+					<h2>♡ Skills</h2>
 				</header>
 
-				<p><strong>Programming:</strong> Python, Java</p>
-				<p><strong>Web:</strong> HTML, CSS</p>
-				<p><strong>Tools:</strong> GitHub, VS Code</p>
+				<div class="skills-grid">
+	<div class="skill-card">
+		<h3>Programming</h3>
+		<p>Python, Java</p>
+	</div>
+
+	<div class="skill-card">
+		<h3>Web</h3>
+		<p>HTML, CSS, JavaScript</p>
+	</div>
+
+	<div class="skill-card">
+		<h3>Tools</h3>
+		<p>GitHub, VS Code, Supabase</p>
+	</div>
+</div>
 
 			</div>
 		</section>
@@ -60,17 +76,27 @@
 		<section id="projects" class="main style1">
 			<div class="container">
 				<header class="major">
-					<h2>Projects</h2>
+					<h2>☁ Projects</h2>
 				</header>
 
-				<h3>1. Python Assignment</h3>
-				<p>Times Table Generator & Student Grade Tracker</p>
+				<div class="projects-grid">
 
-				<h3>2. Website Portfolio</h3>
-				<p>This website is built using HTML and CSS</p>
+	<div class="project-card">
+		<h3>Python Assignment</h3>
+		<p>Times Table Generator and Student Grade Tracker.</p>
+	</div>
 
-				<h3>3. Database Design</h3>
-				<p>ER diagrams and relational database coursework</p>
+	<div class="project-card">
+		<h3>Website Portfolio</h3>
+		<p>A portfolio website built with HTML, CSS and GitHub Pages.</p>
+	</div>
+
+	<div class="project-card">
+		<h3>Database Design</h3>
+		<p>ER diagrams, relational database design and coursework tasks.</p>
+	</div>
+
+</div>
 
 			</div>
 		</section>
@@ -79,7 +105,7 @@
 		<section id="diary" class="main style2">
 			<div class="container">
 				<header class="major">
-					<h2>Production Diary</h2>
+					<h2>✦ Learning Journey</h2>
 				</header>
 
 				<p><strong>Week 1:</strong> This week, I set up my GitHub Pages portfolio website and created the main structure, including the About, Projects, Skills, and Contact sections. I learned how GitHub repositories connect to GitHub Pages and how to publish a website online.
@@ -94,35 +120,77 @@ Overall, this week has been a very meaningful step in my learning journey. I fee
 		</section>
 
 		<!-- Contact -->
-		<section id="contact" class="main style1">
-		<!-- Contact -->
 <section id="contact" class="main style1">
-	<div class="container">
-		<header class="major">
-			<h2>Contact</h2>
-		</header>
+  <div class="container">
+    <div class="contact-box">
+      <header class="major">
+        <h2>✉ Contact</h2>
+      </header>
 
-		<p>If you would like to contact me, please fill in the form below:</p>
+      <p>If you would like to contact me, please fill in the form below:</p>
 
-		<form>
-			<label for="name">Name:</label><br>
-			<input type="text" id="name" name="name" required><br><br>
+      <form id="contact-form">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-			<label for="email">Email:</label><br>
-			<input type="email" id="email" name="email" required><br><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-			<label for="message">Message:</label><br>
-			<textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-			<button type="submit">Send Message</button>
-		</form>
+        <button type="submit">♡ Send Message</button>
+      </form>
 
-	</div>
+      <p id="form-status"></p>
+    </div>
+  </div>
 </section>
+
 <script>
-document.querySelector("form").addEventListener("submit", function(event) {
-	event.preventDefault();
-	alert("Message sent successfully!");
+const supabaseUrl = "https://lsiitfiiuffoctrxokba.supabase.co";
+const supabaseKey = "sb_publishable_v4TDBbtCn47kKsD9PlYbUw_CRM2czVq";
+
+document.getElementById("contact-form").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const status = document.getElementById("form-status");
+  status.textContent = "Sending...";
+  status.style.color = "#7e22ce";
+
+  const payload = {
+    name: document.getElementById("name").value.trim(),
+    email: document.getElementById("email").value.trim(),
+    message: document.getElementById("message").value.trim()
+  };
+
+  try {
+    const response = await fetch(`${supabaseUrl}/rest/v1/contacts`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "apikey": supabaseKey,
+        "Authorization": `Bearer ${supabaseKey}`,
+        "Prefer": "return=minimal"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      status.textContent = "Error: " + errorText;
+      status.style.color = "red";
+      return;
+    }
+
+    status.textContent = "Thank you, your message has been sent.";
+    status.style.color = "green";
+    document.getElementById("contact-form").reset();
+
+  } catch (error) {
+    status.textContent = "Error: " + error.message;
+    status.style.color = "red";
+  }
 });
 </script>
 	</body>
