@@ -3562,3 +3562,262 @@ input, textarea {
 #header p {
     color: white !important;
 }
+/* Cute theme */
+body {
+    background-color: #fdf7ff;
+}
+
+#header {
+    background: linear-gradient(135deg, #d8b4fe, #f9a8d4);
+}
+
+h1, h2, h3 {
+    color: #6b21a8;
+}
+
+.button {
+    background-color: #c084fc;
+    border-radius: 25px;
+}
+
+.button:hover {
+    background-color: #a855f7;
+}
+/* Make style2 sections cute */
+.main.style2 {
+    background: linear-gradient(135deg, #fbcfe8, #e9d5ff);
+    color: #4c1d95;
+}
+
+/* Text inside style2 */
+.main.style2 h2,
+.main.style2 h3,
+.main.style2 p {
+    color: #4c1d95;
+}
+.container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+}
+/* Skills card layout */
+.skills-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.skill-card {
+    background: #fdf7ff;
+    border: 2px solid #e9d5ff;
+    border-radius: 20px;
+    padding: 25px;
+    width: 220px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(168, 85, 247, 0.08);
+}
+
+.skill-card h3 {
+    color: #7e22ce;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #5b5563;
+    margin: 0;
+}
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #fff;
+    border: 2px solid #f3d8ff;
+    border-radius: 20px;
+    padding: 25px;
+    width: 260px;
+    box-shadow: 0 6px 18px rgba(192, 132, 252, 0.08);
+}
+
+.project-card h3 {
+    color: #7e22ce;
+    margin-bottom: 12px;
+}
+
+.project-card p {
+    color: #5b5563;
+    margin: 0;
+}
+/* Cute typography */
+body, input, textarea, select, button, p, label {
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1, h2, h3, .button {
+    font-family: 'Fredoka', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+/* Cute button style */
+.button,
+button,
+input[type="submit"] {
+    background: linear-gradient(135deg, #c084fc, #f9a8d4);
+    color: #fff !important;
+    border: none !important;
+    border-radius: 999px !important;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem;
+    padding: 0.85em 1.8em;
+    box-shadow: 0 8px 20px rgba(192, 132, 252, 0.2);
+    transition: all 0.25s ease;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(192, 132, 252, 0.28);
+}
+
+/* Title decoration */
+header.major h2 {
+    position: relative;
+    display: inline-block;
+    padding-right: 0.3em;
+}
+
+header.major h2::after {
+    content: " ✦";
+    color: #f472b6;
+    font-size: 0.8em;
+}
+
+/* Card decoration */
+.skill-card::before,
+.project-card::before {
+    content: "♡";
+    display: block;
+    font-size: 1.1rem;
+    color: #f9a8d4;
+    margin-bottom: 0.6em;
+}
+
+/* Contact labels */
+#contact label {
+    font-family: 'Fredoka', sans-serif;
+    color: #7e22ce;
+    font-size: 1.1rem;
+}
+
+#contact p {
+    color: #6b7280;
+}
+/* Make contact section narrower */
+#contact .container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+#contact form {
+    margin-top: 20px;
+}
+/* Cute soft button */
+#contact button,
+button[type="submit"] {
+    background: linear-gradient(135deg, #c084fc, #f9a8d4);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0.7em 1.6em;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    box-shadow: 0 6px 14px rgba(192, 132, 252, 0.18);
+    transition: all 0.2s ease;
+}
+
+/* Hover 更轻一点 */
+#contact button:hover,
+button[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(192, 132, 252, 0.25);
+}
+#contact button {
+    display: block;
+    margin-top: 20px;
+}
+/* Contact inner card */
+.contact-box {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Make form elements fit the smaller box */
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Optional: make the whole contact section feel less empty */
+#contact {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+#contact button,
+button[type="submit"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 44px;          /* 控制按钮高度 */
+    padding: 0 24px;       /* 左右间距 */
+
+    line-height: normal;   /* ❗关键：去掉原来的 line-height */
+
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.9rem;
+}
+#contact button {
+    height: 42px;
+    border-radius: 999px;
+    letter-spacing: 0.08em;
+}
+/* Hero button fix */
+#header .button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 56px !important;
+    padding: 0 34px !important;
+    line-height: 1 !important;
+
+    font-family: 'Fredoka', sans-serif !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 0.05em !important;
+
+    border-radius: 999px !important;
+}
+#header .button:hover {
+    transform: translateY(-1px);
+}
